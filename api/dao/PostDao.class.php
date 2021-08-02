@@ -8,4 +8,8 @@ class CafeDao extends BaseDao{
     
 }
 
+// get post, submit post, (admin-remove) , report??, edit post, 
+//registered user moze postat stvari
+
+
 ?>

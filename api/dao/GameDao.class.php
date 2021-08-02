@@ -11,4 +11,8 @@ class CafeDao extends BaseDao{
 
 //image, icon, rating, category, descript, name, preko kategorije listu igara iz kategorije
 
+
+
+
+
 ?>
