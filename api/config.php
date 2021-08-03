@@ -8,7 +8,7 @@ class Config{
         return Config::get_env("DB_HOST", "localhost");
       }
       public static function DB_USERNAME(){
-        return Config::get_env("DB_USERNAME", "koorta");
+        return Config::get_env("DB_USERNAME", "root");
       }
       public static function DB_PASSWORD(){
         return Config::get_env("DB_PASSWORD", "4815162342");

@@ -8,6 +8,8 @@ class UserDao extends BaseDao{
   public function __construct(){
       parent::__construct("user");
   }
+  
+//get user by mail, and token
 
   public function get_user_by_email($email){
     return $this->query_unique("SELECT * FROM users WHERE email = :email",["email"=>$email]);
