@@ -16,25 +16,12 @@ public function get_post_rating($id){
 
 }
 
-public function get_comment_rating($id){
-    return $this->query_unique("SELECT * FROM comment c LEFT JOIN rating r ON c.id = r.comment_id WHERE c.id = :id",["id"=>$id]);
-}
-
-public function get_game_rating($id){
-    return $this->query_unique("SELECT * FROM game g LEFT JOIN rating r ON g.id = r.comment_id WHERE g.id = :id",["id"=>$id]);
-
-}
-
-
-public function delete_rating($id, $table, $fk){
-
-} 
 
 
 
 
 
-public function get_avg_rating_for_post($id){
+public function get_avg_rating($id){
 
     $value =  $this->query("SELECT AVG(rating_value) AS average
             FROM ratings

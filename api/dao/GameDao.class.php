@@ -10,8 +10,8 @@ class GameDao extends BaseDao{
 
 
 //image, icon, rating, category, descript, name
-//preko servisa???
-// preko kategorije listu igara iz kategorije
+//preko servisa??? -> preko kategorije listu igara iz kategorije
+
 
 
 public function get_game($search, $offset, $limit, $order, $total=FALSE){
