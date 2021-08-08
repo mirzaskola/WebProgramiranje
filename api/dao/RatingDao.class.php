@@ -29,6 +29,35 @@ public function get_game_rating($id){
 public function delete_rating($id, $table, $fk){
 
 } 
+
+
+
+
+
+public function get_avg_rating_for_post($id){
+
+    $value =  $this->query("SELECT AVG(rating_value) AS average
+            FROM ratings
+            WHERE post_id = :post_id",["post_id"=>$id]);
+
+
+    return $value[0]['average'];
+}
+
+public function rating_exists($user_id, $post_id){
+    $value = $this->query("SELECT COUNT(user_id) AS total
+                          FROM rating WHERE user_id = :user_id
+                          AND post_id = :post_id",
+                          ["user_id" => strtolower($user_id), "post_id" => $post_id]);
+    if(($value[0]['total'])!=0){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+
 /*
 base dao extends insert function
 
