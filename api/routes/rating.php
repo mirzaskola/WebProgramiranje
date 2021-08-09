@@ -12,7 +12,7 @@ Flight::route('GET /admin/ratings', function(){
   Flight::json(Flight::ratingService()->get_ratings($search, $offset, $limit, $order));
 });
 
-oute('GET /ratings/get_avg_rating/@id', function($id){
+Flight::route('GET /ratings/get_avg_rating/@id', function($id){
   Flight::json(Flight::ratingService()->get_avg_rating($id));
 });
 
