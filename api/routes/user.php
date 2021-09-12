@@ -29,10 +29,8 @@ Flight::route('GET /user/info', function(){
 
 
 Flight::route('POST /register', function(){
- $data = Flight::request()->data->getData();
- Flight::userService()->register($data);
-//send confirmation message
- Flight::json(["message" => "Please confirm your account."]);
+  $data = Flight::request()->data->getData();
+  Flight::json(Flight::userService()->register($data));
 });
 
 
@@ -60,6 +58,10 @@ Flight::route('POST /login', function(){
 
 Flight::route('POST /reset', function(){
   Flight::json(Flight::jwt(Flight::userService()->reset(Flight::request()->data->getData())));
+});
+
+Flight::route('GET /user/info', function(){
+  Flight::json(Flight::userService()->get_by_id(Flight::get("user")["id"]));
 });
 
 ?>
