@@ -18,12 +18,12 @@ require_once dirname(__FILE__)."/routes/category.php";
 
 //include services
 
-require_once dirname(__FILE__).'/services/userService.class.php';
-require_once dirname(__FILE__).'/services/gameService.class.php';
-require_once dirname(__FILE__).'/services/postService.class.php';
-require_once dirname(__FILE__).'/services/categoryService.class.php';
-require_once dirname(__FILE__).'/services/commentService.class.php';
-require_once dirname(__FILE__).'/services/ratingService.class.php';
+require_once dirname(__FILE__).'/services/UserService.class.php';
+require_once dirname(__FILE__).'/services/GameService.class.php';
+require_once dirname(__FILE__).'/services/PostService.class.php';
+require_once dirname(__FILE__).'/services/CategoryService.class.php';
+require_once dirname(__FILE__).'/services/CommentService.class.php';
+require_once dirname(__FILE__).'/services/RatingService.class.php';
 
 
 Flight::set('flight.log_errors', TRUE);
@@ -65,6 +65,8 @@ Flight::route('/', function(){
   Flight::redirect('/docs');
 
 });
+
+
 Flight::start();
 
 ?>

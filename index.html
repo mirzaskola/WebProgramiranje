@@ -111,7 +111,7 @@
                 <section id="comments" data-load="comments.html" ></section>
                 <section id="ratings" data-load="ratings.html" ></section>
                 <section id="profile" data-load="profile.html" ></section>
-                <section id="error_404"><h1>Page not found</h1></section>
+               
   
               </main>
             
@@ -142,29 +142,10 @@
             $(document).ready(function() {
               var app = $.jQuerySPApp({defaultView  : "dashboard"});
   
-                app.route({view: 'posts', load: 'posts.html' });
-                app.route({view: 'categories', load: 'categories.html' });
-                app.route({view: 'comments', load: 'comments.html' });
-                app.route({view: 'dashboard', load: 'dashboard.html' });
-                app.route({view: 'games', load: 'games.html' });
-                app.route({view: 'profile', load: 'profile.html' });
-                app.route({view: 'ratings', load: 'ratings.html' });
-                app.route({view: 'users', load: 'users.html' });
-
                 
               app.run();
   
-              if (!window.localStorage.getItem("token")){
-                document.getElementById("account-dropdown").style.display = "none";
-                document.getElementById("sidebar-menu").style.display = "none";
-              };
-              if(window.localStorage.getItem("token")){
-                document.getElementById("sign-in-button").style.display = "none";
-                var user_info = parse_jwt(window.localStorage.getItem("token"));
-                if (user_info.r != "ADMIN"){
-                  document.getElementById("sidebar-menu").style.display = "none";
-                }
-              };
+          
             });
   
             function doLogout(){

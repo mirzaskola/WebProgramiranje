@@ -176,9 +176,10 @@
   $("#dashboard-comments-card").html(getTotalComments());
   $("#dashboard-ratings-card").html(getTotalRatings());
 
+  
   function getTotalUsers(){
     let value = $.ajax({
-         url: "api/admin/users",
+         url: "admin/users",
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          async: false,
@@ -188,9 +189,10 @@
     return value.responseJSON.length;
   }
 
+
   function getTotalPosts(){
     let value = $.ajax({
-         url: "api/admin/posts",
+         url: "admin/posts",
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          async: false,
@@ -202,7 +204,7 @@
 
   function getTotalGames(){
     let value = $.ajax({
-         url: "api/admin/games",
+         url: "admin/games",
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          async: false,
@@ -214,7 +216,7 @@
 
   function getTotalCategories(){
     let value = $.ajax({
-         url: "api/admin/categories",
+         url: "admin/categories",
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          async: false,
@@ -226,7 +228,7 @@
 
   function getTotalComments(){
     let value = $.ajax({
-         url: "api/admin/comments",
+         url: "admin/comments",
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          async: false,
@@ -238,7 +240,7 @@
 
   function getTotalRatings(){
     let value = $.ajax({
-         url: "api/admin/ratings",
+         url: "admin/ratings",
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          async: false,

@@ -53,7 +53,21 @@
          type: "GET",
          beforeSend: function(xhr){xhr.setRequestHeader('Authentication', localStorage.getItem("token"));},
          success: function(data){
-         
+           let text = "";
+             text += `<div class='col-lg-12'>
+                        <div class='card' style='height: auto;'>
+                          <div class='card-body'>
+                            <h3 class='card-title'>${data.name}</h3>
+                            <h6 class='card-subtitle text-muted'>Username: ${data.username}</h6>
+                            <h6 class='card-subtitle text-muted'>Email: ${data.email}</h6>
+                            <h6 class='card-subtitle text-muted'>Role: ${data.role}</h6>
+                            <h6 class='card-subtitle text-muted'>Status: ${data.status}</h6>
+                            <h6 class='card-subtitle text-muted'>Joined: ${data.created_at}</h6>
+                           </div>
+                         </div>
+                       </div>`;
+           $("#profile-container").html(text);
+         }
       });
   }
 
