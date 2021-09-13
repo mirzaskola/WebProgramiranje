@@ -16,7 +16,7 @@ require_once dirname(__FILE__)."/routes/game.php";
 require_once dirname(__FILE__)."/routes/comment.php";
 require_once dirname(__FILE__)."/routes/category.php";
 
-//include services
+//include services 
 
 require_once dirname(__FILE__).'/services/UserService.class.php';
 require_once dirname(__FILE__).'/services/GameService.class.php';

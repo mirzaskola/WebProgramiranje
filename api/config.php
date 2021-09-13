@@ -23,5 +23,6 @@ class Config{
         return isset($_ENV[$name]) && trim($_ENV[$name]) != '' ? $_ENV[$name] : $default;
       }
 }
-
+const JWT_SECRET = "y4KvQcZVqn3F7uxQvcFk";
+const JWT_TOKEN_TIME = 604800;
 ?>

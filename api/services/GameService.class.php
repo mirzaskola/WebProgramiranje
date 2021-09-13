@@ -12,7 +12,7 @@ class GameService extends BaseService{
   }
 
 
-  public function get_game($search, $offset, $limit, $order, $total = FALSE){
+  public function get_games($search, $offset, $limit, $order, $total = FALSE){
     return $this->dao->get_game($search, $offset, $limit, $order, $total);
   }
 

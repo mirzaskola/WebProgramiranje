@@ -27,7 +27,7 @@ public function get_game($search, $offset, $limit, $order, $total=FALSE){
     $query .= "FROM game ";
 
     if (isset($search)){                                                                                                                                
-        $query .= "WHERE (LOWER(title) LIKE CONCAT('%', :search, '%'))";
+        $query .= "WHERE (LOWER(game_name) LIKE CONCAT('%', :search, '%'))";
         $params['search'] = strtolower($search);
     }
 
@@ -41,6 +41,6 @@ public function get_game($search, $offset, $limit, $order, $total=FALSE){
     }
   }
 
-//grrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+
 }
 ?>

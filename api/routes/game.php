@@ -19,7 +19,7 @@ Flight::route('GET /games', function(){
   $offset = Flight::query('offset', 0);
   $limit = Flight::query('limit', 25);
   $search = Flight::query('search');
-  $order = Flight::query('order', "-title");
+  $order = Flight::query('order', "-game_name");
   Flight::json(Flight::gameService()->get_games($search, $offset, $limit, $order));
 });
 
