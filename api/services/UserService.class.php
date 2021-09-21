@@ -20,7 +20,7 @@ class UserService extends BaseService{
 
     try {
       $this->dao->beginTransaction();
-
+      
       $user = parent::add([
         "user_name" => $user['user_name'],
         "user_mail" => $user['user_mail'],
@@ -33,7 +33,7 @@ class UserService extends BaseService{
 
     } catch (\Exception $e) {
       $this->dao->rollBack();
-      if (strpos($e->getMessage(), 'users.uq_user_email') !== false) {
+      if (strpos($e->getMessage(), 'user.uq_user_email') !== false) {
         throw new Exception("Account with same email exists in the database", 400, $e);
       }else{
         throw $e;

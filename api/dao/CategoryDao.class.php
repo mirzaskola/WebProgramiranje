@@ -20,7 +20,7 @@ public function get_categories($search, $offset, $limit, $order, $total=FALSE){
     }
     $query .= "FROM category ";
     if (isset($search)){
-        $query .= "WHERE (LOWER(name) LIKE CONCAT('%', :search, '%'))";
+        $query .= "WHERE (LOWER(category_name) LIKE CONCAT('%', :search, '%'))";
         $params['search'] = strtolower($search);
     }
     if ($total){
@@ -42,5 +42,6 @@ public function get_categories($search, $offset, $limit, $order, $total=FALSE){
 
   }
 }
+
 
 ?>

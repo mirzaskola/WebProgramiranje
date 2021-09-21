@@ -21,7 +21,7 @@ class CommentDao extends BaseDao{
         $query .= "FROM comment ";
     
         if (isset($search)){
-            $query .= "WHERE (LOWER(comment_text) LIKE CONCAT('%', :search, '%'))";
+            $query .= "WHERE (LOWER(body) LIKE CONCAT('%', :search, '%'))";
             $params['search'] = strtolower($search);
         }
     

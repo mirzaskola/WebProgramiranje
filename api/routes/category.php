@@ -1,7 +1,7 @@
 <?php
 
 
-Flight::route('GET /admin/categories', function(){
+Flight::route('GET /categories', function(){
   $offset = Flight::query('offset', 0);
   $limit = Flight::query('limit', 25);
   $search = Flight::query('search');
