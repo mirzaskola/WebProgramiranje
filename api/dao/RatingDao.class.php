@@ -50,7 +50,7 @@ public function get_ratings($search, $offset, $limit, $order, $total=FALSE){
 public function get_avg_rating($id){
 
     $value =  $this->query("SELECT AVG(rating_value) AS average
-            FROM ratings
+            FROM rating
             WHERE post_id = :post_id",["post_id"=>$id]);
 
 

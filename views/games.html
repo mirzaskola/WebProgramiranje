@@ -74,18 +74,22 @@
     <!-- /.container-fluid -->
 </div>
 <!-- /#page-wrapper -->
+
+<script src="./assets/js/utils.js"></script>
+
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/dataTables/jquery.dataTables.min.js" type="text/javascript"></script>
+
 <script type="text/javascript">
 
-  adminSetup();
+adminSetup();
 
   function adminSetup(){
     if (!window.localStorage.getItem("token")){
       document.getElementById("page-wrapper").style.marginLeft = "0px";
     }
     if(window.localStorage.getItem("token")){
-      var user_info = utils.parse_jwt(window.localStorage.getItem("token"));
+      var user_info = parse_jwt(window.localStorage.getItem("token"));
       if (user_info.r != "ADMIN"){
         document.getElementById("page-wrapper").style.marginLeft = "0px";
       }

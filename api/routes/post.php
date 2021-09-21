@@ -26,7 +26,7 @@ Flight::route('GET /posts', function(){
 });
 
 
-Flight::route('POST /admin/posts', function(){
+Flight::route('POST /posts', function(){
  $data = Flight::request()->data->getData();
  Flight::postService()->add_post($data);
 });

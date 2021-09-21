@@ -24,7 +24,7 @@ class PostService extends BaseService{
        return parent::add($data);
 
   }
-  //removing posts ????
+  
 
 }
 ?>

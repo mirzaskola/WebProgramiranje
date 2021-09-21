@@ -161,7 +161,7 @@
 <script src="assets/js/dataTables/jquery.dataTables.min.js" type="text/javascript"></script>
 <script>
 
-  adminSetup();
+adminSetup();
 
   function adminSetup(){
     if (!window.localStorage.getItem("token")){
@@ -174,7 +174,6 @@
       }
     }
   }
-
   $("#dashboard-users-card").html(getTotalUsers());
   $("#dashboard-posts-card").html(getTotalPosts());
   $("#dashboard-games-card").html(getTotalGames());
